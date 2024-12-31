@@ -1,0 +1,76 @@
+/* Corpo */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'PT Serif', serif; /* Fonte PT Serif */
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;    /* Centraliza verticalmente */
+    overflow: hidden; /* Impede que o conteúdo vaze da tela */
+    position: relative;
+}
+
+/* Fundo */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('fundo.jpg'); /* Substitua 'fundo.jpg' pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; /* Mais visível */
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+
+/* Centralização de conteúdo */
+.centered-content {
+    text-align: center; /* Centraliza o texto dentro do bloco */
+}
+
+/* Texto principal (MIXTAPE B.A.B.Y) */
+.main-text {
+    font-size: 6rem; /* Tamanho grande para destaque */
+    color: red; /* Cor vermelha */
+    font-family: 'PT Serif', serif; /* Fonte PT Serif */
+    font-weight: 700; /* Fonte em negrito */
+    margin: 0; /* Remove margens automáticas */
+    text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red; /* Brilho reduzido */
+}
+
+/* Texto secundário (MEVY 2025...) com a nova fonte Ephesis */
+.sub-text {
+    font-size: 2rem; /* Tamanho menor */
+    color: white; /* Cor branca */
+    margin-top: 0.5rem; /* Espaço entre o texto principal e o secundário */
+    opacity: 1; /* Sem efeito de fade-in */
+    font-family: 'Ephesis', serif; /* Fonte Ephesis */
+    font-weight: 400; /* Peso normal */
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+    /* Ajuste o tamanho das fontes */
+    .main-text {
+        font-size: 4rem; /* Menor para telas menores */
+    }
+
+    .sub-text {
+        font-size: 1.5rem; /* Ajuste a fonte secundária */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Ajustes ainda maiores para telas muito pequenas, como celulares */
+    .main-text {
+        font-size: 3rem; /* Menor para celulares */
+    }
+
+    .sub-text {
+        font-size: 1.2rem; /* Ajuste a fonte secundária */
+    }
+}
